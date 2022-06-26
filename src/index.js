@@ -17,7 +17,17 @@ function* rootSaga() {
     yield takeEvery('FETCH_DETAILS', fetchDetails);
 }
 
+function* fetchDetails (action) {
 
+    try {
+        const details = yield axios.get(`/api/movie/${action.payload}`)
+        yield put ({type: 'SET_DETAILS', payload: details.data});
+    }
+    catch (err) { 
+        console.error('get details failed', err)
+        return;
+    }
+}
 
 function* fetchAllMovies() {
     // get all movies from the DB
