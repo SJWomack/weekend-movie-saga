@@ -1,0 +1,32 @@
+.movie-title{
+    border-bottom: 5px solid black;
+    width: fit-content;
+    text-decoration: wavy;
+    margin: 15px auto;
+}
+.description {
+    font-weight: normal;
+    border: 5px ridge darkgray;
+    width: 500px;
+    text-align: justify;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: lightcyan;
+}
+.genre-name{
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.genre{
+    margin: auto;
+    margin-bottom: 2px;
+    border-bottom: 3px solid black ;
+    width: fit-content;
+}
+.genres{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    margin-right: 5px;
+    justify-content: center;
+}
