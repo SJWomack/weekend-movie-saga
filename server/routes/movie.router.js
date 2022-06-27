@@ -16,6 +16,8 @@ router.get('/', (req, res) => {
 
 });
 
+// sends query to db to grab movie details including
+// all genres and sends data back to client
 router.get('/:id' , (req,res) =>{
   const sqlQuery = `
   SELECT movies.description, movies.poster, movies.title, array_agg(genres.name) as genres

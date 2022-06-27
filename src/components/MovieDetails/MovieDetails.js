@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
+//renders movie details
 function MovieDetails(){
     const {id} = useParams();
     const dispatch = useDispatch();
@@ -9,6 +10,7 @@ function MovieDetails(){
     console.log(movieDetails)
     console.log(id);
  
+    //calls detail saga on page load
        useEffect(() =>{ dispatch({
             type: 'FETCH_DETAILS',
             payload: id
@@ -22,7 +24,9 @@ function MovieDetails(){
             <h1>{movieDetails.title}</h1>
             <img src={movieDetails.poster}/>
             <h3>{movieDetails.description}</h3>
-            {movieDetails.genres.map((genre, index) => <h3 key ={index}>{genre}</h3>)}
+            <h3>Genres</h3>
+            {/* loops through genres and renders on dom */}
+            {movieDetails.genres.map((genre, index) => <h4 key ={index}>{genre}</h4>)}
             </div>}
         </>
     )

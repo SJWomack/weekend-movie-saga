@@ -17,6 +17,8 @@ function* rootSaga() {
     yield takeEvery('FETCH_DETAILS', fetchDetails);
 }
 
+//on call sends a get request to api endpoint with movie
+//id sent in params, then updates detail state
 function* fetchDetails (action) {
  console.log(action.payload)
     try {
@@ -28,6 +30,7 @@ function* fetchDetails (action) {
         return;
     }
 }
+
 
 function* fetchAllMovies() {
     // get all movies from the DB
