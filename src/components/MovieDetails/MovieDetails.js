@@ -17,7 +17,7 @@ function MovieDetails() {
             type: 'FETCH_DETAILS',
             payload: id
         })
-    }, [])
+    }, [id])
 
     return (
         <>

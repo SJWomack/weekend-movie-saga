@@ -19,8 +19,8 @@ function MovieList() {
             <section className="movies">
                 {/* loops through movie state and renders
                     info/picture to dom */}
-                {movies.map(movie => 
-                  <MovieItem movie={movie} key={movie.id}/>
+                {movies.map(movie =>
+                    <MovieItem movie={movie} key={movie.id} />
                 )}
             </section>
         </main>
